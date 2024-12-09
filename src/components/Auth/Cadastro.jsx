@@ -2,6 +2,9 @@ import './Cadastro.css'
 import React, { useState } from 'react';
 import axios from 'axios';
 
+// Páginas
+import Header from '../Header/Header';
+
 const Register = () => {
     const [formData, setFormData] = useState({
         firstname: '',
@@ -36,6 +39,8 @@ const Register = () => {
 
     return (
         <>
+            <Header />
+
             <div className='form-container'>
                 <form onSubmit={handleSubmit}>
                     <input
