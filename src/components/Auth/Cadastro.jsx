@@ -1,6 +1,7 @@
 import './Cadastro.css';
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -133,7 +134,8 @@ const Register = () => {
     };
 
     return (
-        <div className='page-container bg-dark'>
+        <div className='page-container bg-dark d-flex flex-column align-items-center'>
+            {/* <h2 className='text-light m-auto'>Cadastro de Profissional</h2> */}
             <div className='form-container m-auto'>
                 <form className='d-flex flex-column p-2' onSubmit={handleSubmit}>
                     {/* Mensagem de erro global */}
@@ -378,6 +380,12 @@ const Register = () => {
                         )}
                     </div>
                 </form>
+                <h6 className='mt-4 m-auto text-center pt-4'>
+                    Já tem conta com a gente?<br></br>
+                    <Link to={'/login'}>
+                        <span>Faça Login</span>
+                    </Link>
+                </h6>
             </div>
         </div>
     );

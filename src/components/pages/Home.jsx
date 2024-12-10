@@ -45,7 +45,7 @@ const Home = () => {
                 </section>
 
                 {/* Seção 3 */}
-                <section className='novos-mundos d-flex justify-content-center py-4'>
+                <section className='sobre-nos d-flex justify-content-center py-4'>
                     <div className='d-flex flex-column align-items-start justify-content-center me-3'>
                         <h1>Sobre nós</h1>
                         <p className='sobre-text me-3 mb-4'>

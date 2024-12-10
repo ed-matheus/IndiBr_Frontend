@@ -11,6 +11,19 @@
     width: 550px;
 }
 
+.form-container h6 {
+    border-top: 2px solid #000;
+}
+
+.form-container h6 span {
+    color: #6e6e6e;
+    text-decoration: underline;
+}
+
+.form-container h6 span:hover {
+    color: #919191;
+}
+
 form label {
     font-size: 0.9rem;
 }
