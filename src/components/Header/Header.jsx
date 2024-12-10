@@ -1,14 +1,14 @@
-import React from 'react'
-import './Header.css' // Arquivo CSS
-import { Link } from 'react-router-dom'
-import logo from '/cropped-indd.png' // Importando Logo
+import React from 'react';
+import './Header.css'; // Arquivo CSS
+import { NavLink } from 'react-router-dom'; // Importando NavLink
+import logo from '/cropped-indd.png'; // Importando Logo
 
 const Header = () => {
     return (
         <header className='d-flex justify-content-around align-items-center p-3'>
-            <Link to="/">
+            <NavLink to="/">
                 <img src={logo} alt="Logo da IndiBr" width={130} />
-            </Link>
+            </NavLink>
 
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
@@ -19,44 +19,42 @@ const Header = () => {
                         <ul className="navbar-nav">
                             {/* Páginas do site */}
                             <li className="nav-item me-4">
-                                <Link to="/">
-                                    <span className="nav-link active" aria-current="page" href="#">Home</span>
-                                </Link>
+                                <NavLink to="/" className="nav-link" activeClassName="active" exact>
+                                    Home
+                                </NavLink>
                             </li>
                             <li className="nav-item me-4">
-                                <Link to="/">
-                                    <span className="nav-link" aria-current="page" href="#">Como funciona</span>
-                                </Link>
+                                <NavLink to="/servicos" className="nav-link" activeClassName="active">
+                                    Serviços
+                                </NavLink>
                             </li>
                             <li className="nav-item me-4">
-                                <Link to="/sobre">
-                                    <span className="nav-link" href="#">Sobre</span>
-                                </Link>
+                                <NavLink to="/sobre" className="nav-link" activeClassName="active">
+                                    Sobre
+                                </NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link to="/contato">
-                                    <span className="nav-link" href="#">Contato</span>
-                                </Link>
+                                <NavLink to="/contato" className="nav-link" activeClassName="active">
+                                    Contato
+                                </NavLink>
                             </li>
                         </ul>
-
-                        
                     </div>
                 </div>
             </nav>
 
             {/* Login e Cadastro */}
             <div className='auth'>
-                <Link to="/login">
+                <NavLink to="/login">
                     <button className='login btn btn-dark me-3'>Entrar</button>
-                </Link>
+                </NavLink>
                 
-                <Link to="/cadastro">
+                <NavLink to="/cadastro">
                     <button className='cadastro btn btn-dark'>Cadastrar</button>
-                </Link>
+                </NavLink>
             </div>
         </header>
-    )
+    );
 }
 
-export default Header
+export default Header;
