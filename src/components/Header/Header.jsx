@@ -1,13 +1,13 @@
 import React from 'react'
 import './Header.css' // Arquivo CSS
 import { Link } from 'react-router-dom'
-import logo from '../../assets/images/cropped-indd.png' // Importando Logo
+import logo from '/cropped-indd.png' // Importando Logo
 
 const Header = () => {
     return (
-        <header className='d-flex justify-content-around align-items-center p-4'>
+        <header className='d-flex justify-content-around align-items-center p-3'>
             <Link to="/">
-                <img src={logo} alt="Logo da IndiBr" width={150} />
+                <img src={logo} alt="Logo da IndiBr" width={130} />
             </Link>
 
             <nav className="navbar navbar-expand-lg">
@@ -18,19 +18,24 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             {/* Páginas do site */}
-                            <li className="nav-item me-3">
+                            <li className="nav-item me-4">
                                 <Link to="/">
                                     <span className="nav-link active" aria-current="page" href="#">Home</span>
                                 </Link>
                             </li>
-                            <li className="nav-item me-3">
+                            <li className="nav-item me-4">
                                 <Link to="/">
                                     <span className="nav-link" aria-current="page" href="#">Como funciona</span>
                                 </Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item me-4">
                                 <Link to="/sobre">
                                     <span className="nav-link" href="#">Sobre</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to="/contato">
+                                    <span className="nav-link" href="#">Contato</span>
                                 </Link>
                             </li>
                         </ul>
